@@ -52,7 +52,7 @@ texture_repeat = 2
 material = SubResource("ShaderMaterial_mnl0x")
 offset_right = 8000.0
 offset_bottom = 2868.0
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.73, 0.73)
 texture = ExtResource("2_thcyp")
 
 [node name="Button2" type="Button" parent="."]
@@ -157,7 +157,6 @@ volume_db = -12.18
 [node name="IntroSoft" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_45tl4")
 volume_db = -28.108
-autoplay = true
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
