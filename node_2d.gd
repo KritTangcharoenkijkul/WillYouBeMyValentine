@@ -13,6 +13,8 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	$IntroSoft.stop()
+	$Samba.play()
 	$Label2.text = "You choose: Yes"
 	$ColorRect.visible = false
 	$TextureRect.visible = true
@@ -30,7 +32,7 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	time_press = time_press + 1
 	$Label2.text = "You choose: No"
-	$Button.custom_minimum_size = Vector2(873, (int(time_press)* 200) + int(yes_button))
+	$Button.custom_minimum_size = Vector2(873, (int(time_press)* 115) + int(yes_button))
 	if time_press == 1:
 		$Photo1.visible = false
 		$Photo3.visible = true
@@ -44,3 +46,4 @@ func _on_button_2_pressed() -> void:
 	if time_press == 4:
 		$Photo4.visible = false
 		$Photo6.visible = true
+		$Button2.visible = false

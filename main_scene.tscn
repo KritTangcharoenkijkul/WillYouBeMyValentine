@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dagmidjv1s8uk"]
+[gd_scene load_steps=15 format=3 uid="uid://dagmidjv1s8uk"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_qcaxh"]
 [ext_resource type="Texture2D" uid="uid://bs2lcpgvjj3l0" path="res://3rdValentine.png" id="2_thcyp"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dj0jhtc72mc6d" path="res://pls.jpg" id="8_24g6a"]
 [ext_resource type="Texture2D" uid="uid://st3byxcdltnv" path="res://tombeg.png" id="9_mg3l7"]
 [ext_resource type="Texture2D" uid="uid://s5krmanr7as0" path="res://done.png" id="9_n647d"]
+[ext_resource type="AudioStream" uid="uid://godlqikfkjjw" path="res://Samba De Janeiro - Chorus Loop.wav" id="11_osd01"]
+[ext_resource type="AudioStream" uid="uid://djnhnurdura7e" path="res://Before i leave (1).wav" id="12_45tl4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mnl0x"]
 shader = ExtResource("2_xy37l")
@@ -50,21 +52,22 @@ texture_repeat = 2
 material = SubResource("ShaderMaterial_mnl0x")
 offset_right = 8000.0
 offset_bottom = 2868.0
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_thcyp")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 175.0
-offset_top = 2094.0
-offset_right = 1029.0
-offset_bottom = 2537.0
+offset_left = 115.0
+offset_top = 1561.0
+offset_right = 988.0
+offset_bottom = 1921.0
 theme_override_font_sizes/font_size = 120
 text = "No"
 
 [node name="Button" type="Button" parent="."]
-offset_left = 159.0
-offset_top = 1516.0
-offset_right = 1032.0
-offset_bottom = 1869.0
+offset_left = 115.0
+offset_top = 1103.0
+offset_right = 988.0
+offset_bottom = 1456.0
 theme_override_font_sizes/font_size = 120
 text = "Yes"
 
@@ -89,59 +92,72 @@ horizontal_alignment = 1
 
 [node name="Photo3" type="TextureRect" parent="."]
 visible = false
-offset_left = 69.0
-offset_top = -69.0
-offset_right = 1034.0
-offset_bottom = 1132.0
+offset_left = 196.0
+offset_top = -228.0
+offset_right = 1161.0
+offset_bottom = 973.0
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_nmbqk")
 
 [node name="Photo1" type="TextureRect" parent="."]
-offset_left = 232.0
-offset_top = 305.0
-offset_right = 955.0
-offset_bottom = 1205.0
+offset_left = 195.0
+offset_top = 102.0
+offset_right = 918.0
+offset_bottom = 1002.0
 texture = ExtResource("4_5gtgy")
 
 [node name="Photo2" type="TextureRect" parent="."]
 visible = false
-offset_left = 222.0
-offset_top = 793.0
-offset_right = 1022.0
-offset_bottom = 1593.0
+offset_left = 216.0
+offset_top = 380.0
+offset_right = 1016.0
+offset_bottom = 1180.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("6_kgmks")
 
 [node name="Photo4" type="TextureRect" parent="."]
 visible = false
-offset_left = 140.0
-offset_top = 731.0
-offset_right = 940.0
-offset_bottom = 1531.0
+offset_left = 204.0
+offset_top = 395.0
+offset_right = 1004.0
+offset_bottom = 1195.0
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("7_jiyvn")
 
 [node name="Photo5" type="TextureRect" parent="."]
 visible = false
-offset_left = 133.0
-offset_top = 737.0
-offset_right = 933.0
-offset_bottom = 1537.0
+offset_left = 203.0
+offset_top = 375.0
+offset_right = 1003.0
+offset_bottom = 1175.0
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_24g6a")
 
 [node name="Photo6" type="TextureRect" parent="."]
 visible = false
-offset_left = 159.0
-offset_top = 775.0
-offset_right = 882.0
-offset_bottom = 1675.0
+offset_left = 191.0
+offset_top = 337.0
+offset_right = 914.0
+offset_bottom = 1237.0
 texture = ExtResource("9_mg3l7")
 
 [node name="TextureDone" type="TextureRect" parent="."]
 visible = false
-offset_left = -8.0
-offset_top = -285.0
-offset_right = 1198.0
-offset_bottom = 1216.0
+offset_left = 132.0
+offset_top = 915.0
+offset_right = 1338.0
+offset_bottom = 2416.0
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("9_n647d")
+
+[node name="Samba" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_osd01")
+volume_db = -12.18
+
+[node name="IntroSoft" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_45tl4")
+volume_db = -28.108
+autoplay = true
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
